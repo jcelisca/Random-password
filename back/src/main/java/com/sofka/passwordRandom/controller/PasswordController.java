@@ -3,7 +3,6 @@ package com.sofka.passwordRandom.controller;
 import com.sofka.passwordRandom.model.Password;
 import com.sofka.passwordRandom.model.PasswordDTO;
 import com.sofka.passwordRandom.repository.PasswordRepository;
-import org.bson.codecs.jsr310.LocalDateTimeCodec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -33,4 +32,5 @@ public class PasswordController {
             return passw;
         }).flatMap(repository::save);
     }
+
 }
