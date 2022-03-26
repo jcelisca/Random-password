@@ -1,10 +1,9 @@
-package com.sofka.passwordRandom.model;
+package com.sofka.RandomPassword.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import reactor.core.publisher.Mono;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Random;
 
 @Document(collection = "password")
@@ -12,11 +11,11 @@ public class Password {
     @Id
     private String id;
 
-    private LocalDate date;
+    private Date date;
 
     private String password;
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -28,7 +27,7 @@ public class Password {
         return password;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
